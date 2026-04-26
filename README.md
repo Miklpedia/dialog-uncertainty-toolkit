@@ -57,12 +57,13 @@ pip install -r requirements.txt
 Place 5–20 short English audio samples (10–30 seconds each, `.wav` or `.mp3`)
 in the `data/` directory. See `data/README.md` for recommended public sources.
 
-**Prototype runs** for the correlation figures in this repo used clips from
-[**Common Voice Spontaneous Speech 3.0 — English**](https://mozilladatacollective.com/datasets/cmn1pv5hi00uto1072y1074y7)
-(Mozilla Data Collective; spontaneous responses to prompts). The dataset card
-lists **CC0-1.0** and usage constraints (e.g. do not attempt to identify speakers;
-do not re-host the corpus). **Audio is not committed** to Git; only local
-`output/` artifacts such as the sample PNGs above.
+**Prototype runs** for the correlation figures in this repo used **20 clips**
+from [**Common Voice Spontaneous Speech 3.0 — English**](https://mozilladatacollective.com/datasets/cmn1pv5hi00uto1072y1074y7)
+(Mozilla Data Collective; spontaneous responses to prompts)—a small arbitrary
+subset, not the full corpus. The dataset card lists **CC0-1.0** and usage
+constraints (e.g. do not attempt to identify speakers; do not re-host the
+corpus). **Audio is not committed** to Git; only local `output/` artifacts such
+as the sample PNGs above.
 
 ### Run notebooks in order
 ```bash

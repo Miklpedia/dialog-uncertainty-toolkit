@@ -9,8 +9,9 @@ read sentences). The published license is **CC0-1.0**; the dataset card also
 states constraints (e.g. no speaker identification; no re-hosting of the
 corpus). Re-check the card if you use a different release or mirror.
 
-The current exploratory runs use on the order of **n ≈ 20** utterances, roughly
-**10–30 seconds** each, as `.mp3` or `.wav` under `data/`. **Raw audio is not
+The reported exploratory runs use **n = 20** utterances (a convenience subset,
+not an official split from the release), roughly **10–30 seconds** each, as
+`.mp3` or `.wav` under `data/`. **Raw audio is not
 checked into this repository** (see `data/README.md`); pipelines write derived
 CSVs and figures under `output/` only on the author’s machine.
 
