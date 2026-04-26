@@ -6,6 +6,9 @@ this repository.**
 
 ## Recommended public sources
 
+- **Common Voice Spontaneous Speech 3.0 — English** — https://mozilladatacollective.com/datasets/cmn1pv5hi00uto1072y1074y7  
+  Spontaneous (prompted) English speech; **CC0-1.0** on the dataset card.
+  Used for recent prototype runs in this repo.
 - **LibriSpeech mini** — https://www.openslr.org/12  
   Clean read English, public domain.
 - **Mozilla Common Voice** — https://commonvoice.mozilla.org/  

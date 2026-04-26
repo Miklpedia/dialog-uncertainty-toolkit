@@ -1,5 +1,23 @@
 # Methodology Notes
 
+## Speech data (prototype)
+
+Short English clips for the notebooks were sourced from [**Common Voice
+Spontaneous Speech 3.0 — English**](https://mozilladatacollective.com/datasets/cmn1pv5hi00uto1072y1074y7)
+on Mozilla Data Collective: crowdsourced **spontaneous** answers (as opposed to
+read sentences). The published license is **CC0-1.0**; the dataset card also
+states constraints (e.g. no speaker identification; no re-hosting of the
+corpus). Re-check the card if you use a different release or mirror.
+
+The current exploratory runs use on the order of **n ≈ 20** utterances, roughly
+**10–30 seconds** each, as `.mp3` or `.wav` under `data/`. **Raw audio is not
+checked into this repository** (see `data/README.md`); pipelines write derived
+CSVs and figures under `output/` only on the author’s machine.
+
+This corpus is a pragmatic stand-in for “spoken user input” when prototyping
+ASR + prosody + LLM uncertainty. It is **not** full conversational dialogue;
+claims should stay scoped to signal extraction and correlation on this sample.
+
 ## ASR Confidence (Whisper)
 
 Whisper outputs token-level log-probabilities for each transcribed token.

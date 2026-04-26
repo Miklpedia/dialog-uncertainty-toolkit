@@ -4,7 +4,9 @@
 > dialogue interactions — combining ASR confidence (Whisper), LLM uncertainty
 > (token entropy + semantic entropy), and prosodic features (Praat/Parselmouth).
 
-**Status**: Research prototype · Work in progress · Author: Chayaphon Chaisangkha
+**Status**: Research prototype · Work in progress · Author: Chayaphon Chaisangkha  
+**Done**: Notebooks `01`–`04` — multi-source signal extraction + correlation visuals (see Sample Output).  
+**Next (aligned with Master’s proposal)**: `05_intervention_policy.ipynb` — 3-way policy (`AUTO` / `CLARIFY` / `DEFER`), ablations (text-only vs speech-only vs combined), and simple evaluation metrics.
 
 ## Motivation
 
@@ -35,6 +37,7 @@ research on **adaptive intervention policies for LLM-based spoken dialogue**.
 | `02_llm_uncertainty.ipynb` | Generate responses with a small open LLM, compute token entropy and a simplified semantic entropy (Kuhn et al., 2023) |
 | `03_prosody_features.ipynb` | Extract F0, intensity, pause ratio, and speaking rate using Parselmouth |
 | `04_combined_pipeline.ipynb` | Merge all signals, compute cross-signal correlations, and visualize |
+| `05_intervention_policy.ipynb` | *(Planned)* Train/evaluate a multiclass intervention policy and ablation conditions |
 
 ## Quick Start
 
@@ -53,6 +56,13 @@ pip install -r requirements.txt
 ### Prepare audio
 Place 5–20 short English audio samples (10–30 seconds each, `.wav` or `.mp3`)
 in the `data/` directory. See `data/README.md` for recommended public sources.
+
+**Prototype runs** for the correlation figures in this repo used clips from
+[**Common Voice Spontaneous Speech 3.0 — English**](https://mozilladatacollective.com/datasets/cmn1pv5hi00uto1072y1074y7)
+(Mozilla Data Collective; spontaneous responses to prompts). The dataset card
+lists **CC0-1.0** and usage constraints (e.g. do not attempt to identify speakers;
+do not re-host the corpus). **Audio is not committed** to Git; only local
+`output/` artifacts such as the sample PNGs above.
 
 ### Run notebooks in order
 ```bash
@@ -91,6 +101,9 @@ See `docs/methodology.md` for detail on:
 
 - **Small sample size**: experiments use 20 audio clips; results are illustrative,
   not statistically conclusive.
+- **No intervention policy yet**: this repository currently stops at signal
+  extraction and exploratory correlation; multiclass intervention training
+  is planned in `05_intervention_policy.ipynb`.
 - **No ground-truth error labels**: this prototype does not yet evaluate whether
   combined signals predict human-judged response errors. That is the next step.
 - **Simplified semantic entropy**: uses cosine clustering rather than the full
